@@ -6,8 +6,9 @@ namespace :data do
     
     cities.each do |city|
       bars = []
-      (1..1000).each do |n|
-        attrs = {:name => Faker::Company.name, 
+      (0..1000).each do |n|
+        attrs = {:id => n,
+          :name => Faker::Company.name, 
           :city => city, 
           :street => Faker::Address.street_name, 
           :street_number => rand(100), 
